@@ -1,0 +1,213 @@
+# .gitignore
+
+# =============== 환경 변수 및 설정 ===============
+.env
+.env.local
+.env.production
+.env.development
+*.env
+
+# =============== Python (Backend) ===============
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+/lib/
+/lib64/
+!frontend/src/lib/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# PyCharm
+.idea/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# =============== Node.js (Frontend) ===============
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Next.js
+.next/
+out/
+.vercel/
+
+# Build outputs
+dist/
+build/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# =============== 데이터베이스 ===============
+*.db
+*.sqlite
+*.sqlite3
+chroma_db/
+postgres_data/
+# backend/data/ · backend/documents/ : 2026-06-23 gitignore 해제 — 블라인드 데모 데이터를
+#   정식 추적(EC2 월 네비게이션 캐시 배포용). ⚠️ 실제 LG 데이터 들어오면 다시 ignore 검토.
+
+# =============== 로그 및 임시 파일 ===============
+*.log
+logs/
+tmp/
+uploads/
+cache/
+
+# =============== LKS 데모 — 런타임 산출물 / 보안 ===============
+# task JSON 영속화 (배포마다 새로) — backend/tasks/.gitkeep 만 유지
+backend/tasks/*
+!backend/tasks/.gitkeep
+# 생성된 보고서 (PPT/Word/Excel) — 런타임 산출물
+backend/temp/*
+!backend/temp/.gitkeep
+# 그 외 모든 temp/ — backend 외부의 temp 디렉토리는 안전하게 무시
+/temp/
+# 에디터 atomic-write 임시파일 (예: foo.ts.tmp.19196.ac69d0…)
+*.tmp.*
+# LG 제공 양식 원본 (루트) + 생성된 트림 샘플 — 데이터 GitHub 비노출
+/*.xlsx
+sample_uploads/
+# 챗에서 쌓이는 도구 wishlist — local 메모, 공유 X
+backend/tool_wishlist.md
+# nginx basic auth 자격증명 — 절대 commit 금지
+nginx/htpasswd
+nginx/htpasswd.*
+!nginx/htpasswd.example
+nginx/certs/
+# demo env override (실 비밀 들어갈 수 있음) — .env.demo 만 example 로 commit
+backend/.env.demo.local
+
+# Claude Code local 권한/설정 — 사용자별로 다름, 공유 X
+.claude/settings.local.json
+
+# docs/ — LG 제공 자료 + 내부 가이드. private repo 라도 GitHub 에 올리지 않음
+docs/
+
+# =============== Docker ===============
+# Docker 관련은 보통 포함하지만, 필요시 제외
+# docker-compose.override.yml
+# Dockerfile.dev
+
+# =============== IDE 및 에디터 ===============
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Vim
+*.swp
+*.swo
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# =============== OS 관련 ===============
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# =============== 프로젝트 특화 ===============
+# 세션 데이터
+sessions/
+kakao_sessions/
+kakao_cache/
+
+# 업로드 파일들
+uploads/
+media/
+
+# 백업 파일들
+*.bak
+*.backup
+
+# 테스트 파일들
+test_data/
+.coverage
+coverage/
+
+# =============== 기타 ===============
+# Sass
+.sass-cache/
+
+# Grunt
+.grunt
+
+# Bower
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache (https://parceljs.org/)
+.parcel-cache

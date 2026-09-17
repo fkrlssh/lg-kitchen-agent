@@ -1,0 +1,142 @@
+[
+  {
+    "id": "bf7f939511a4",
+    "filename": "재료비_4월W18_제출.xlsx",
+    "stored": "bf7f939511a4__재료비_4월W18_제출.xlsx",
+    "category": "부서 제출",
+    "period_id": "2026-04-5",
+    "area": "material_cost",
+    "size": 274246,
+    "uploaded_at": "2026-07-02T18:44:52"
+  },
+  {
+    "id": "a27b4f743ded",
+    "filename": "가공비_4월W16_제출.xlsx",
+    "stored": "a27b4f743ded__가공비_4월W16_제출.xlsx",
+    "category": "부서 제출",
+    "period_id": "2026-04-5",
+    "area": "processing_cost",
+    "size": 274147,
+    "uploaded_at": "2026-07-02T18:44:54"
+  },
+  {
+    "id": "c285ed63a709",
+    "filename": "물류비_4월W18_제출.xlsx",
+    "stored": "c285ed63a709__물류비_4월W18_제출.xlsx",
+    "category": "부서 제출",
+    "period_id": "2026-04-5",
+    "area": "logistics_cost",
+    "size": 274210,
+    "uploaded_at": "2026-07-02T18:44:56"
+  },
+  {
+    "id": "8b1c2b48cbb7",
+    "filename": "투자비_4월W18_제출.xlsx",
+    "stored": "8b1c2b48cbb7__투자비_4월W18_제출.xlsx",
+    "category": "부서 제출",
+    "period_id": "2026-04-5",
+    "area": "investment",
+    "size": 274246,
+    "uploaded_at": "2026-07-02T18:44:57"
+  },
+  {
+    "id": "0c6d1563e0b9",
+    "filename": "매출(지역1)_4월W18_제출.xlsx",
+    "stored": "0c6d1563e0b9__매출_지역1__4월W18_제출.xlsx",
+    "category": "부서 제출",
+    "period_id": "2026-04-5",
+    "area": "sales_region1",
+    "size": 274246,
+    "uploaded_at": "2026-07-02T18:44:59"
+  },
+  {
+    "id": "84ffb7826095",
+    "filename": "매출(지역2)_4월_제출.xlsx",
+    "stored": "84ffb7826095__매출_지역2__4월_제출.xlsx",
+    "category": "부서 제출",
+    "period_id": "2026-04-5",
+    "area": "sales_region2",
+    "size": 274245,
+    "uploaded_at": "2026-07-02T18:45:01"
+  },
+  {
+    "id": "29ce0930eeeb",
+    "filename": "품질_4월W14_제출.xlsx",
+    "stored": "29ce0930eeeb__품질_4월W14_제출.xlsx",
+    "category": "부서 제출",
+    "period_id": "2026-04-5",
+    "area": "quality",
+    "size": 274172,
+    "uploaded_at": "2026-07-02T18:45:02"
+  },
+  {
+    "id": "fcc5c7ce2122",
+    "filename": "고정비·사업부_4월_제출.xlsx",
+    "stored": "fcc5c7ce2122__고정비_사업부_4월_제출.xlsx",
+    "category": "부서 제출",
+    "period_id": "2026-04-5",
+    "area": "fixed_div_control",
+    "size": 274246,
+    "uploaded_at": "2026-07-02T18:45:04"
+  },
+  {
+    "id": "686da6d90732",
+    "filename": "고정비·생산제판_4월_제출.xlsx",
+    "stored": "686da6d90732__고정비_생산제판_4월_제출.xlsx",
+    "category": "부서 제출",
+    "period_id": "2026-04-5",
+    "area": "fixed_prod_control",
+    "size": 274246,
+    "uploaded_at": "2026-07-02T18:45:06"
+  },
+  {
+    "id": "10a012eab2fa",
+    "filename": "고정비·UnControl_4월_제출.xlsx",
+    "stored": "10a012eab2fa__고정비_UnControl_4월_제출.xlsx",
+    "category": "부서 제출",
+    "period_id": "2026-04-5",
+    "area": "fixed_uncontrol",
+    "size": 274246,
+    "uploaded_at": "2026-07-02T18:45:08"
+  },
+  {
+    "id": "6daf8426afa8",
+    "filename": "고정비·Rawdata_4월_제출.xlsx",
+    "stored": "6daf8426afa8__고정비_Rawdata_4월_제출.xlsx",
+    "category": "부서 제출",
+    "period_id": "2026-04-5",
+    "area": "fixed_rawdata",
+    "size": 274244,
+    "uploaded_at": "2026-07-02T18:45:09"
+  },
+  {
+    "id": "b4945d3ea1a1",
+    "filename": "재료비_4월W18_제출_v2.xlsx",
+    "stored": "b4945d3ea1a1__재료비_4월W18_제출_v2.xlsx",
+    "category": "부서 제출",
+    "period_id": "2026-04-5",
+    "area": "material_cost",
+    "size": 274245,
+    "uploaded_at": "2026-07-02T18:45:11"
+  },
+  {
+    "id": "1ccdd5834ac6",
+    "filename": "투자비_4월W18_제출_v2.xlsx",
+    "stored": "1ccdd5834ac6__투자비_4월W18_제출_v2.xlsx",
+    "category": "부서 제출",
+    "period_id": "2026-04-5",
+    "area": "investment",
+    "size": 274259,
+    "uploaded_at": "2026-07-02T18:45:18"
+  },
+  {
+    "id": "a75e34326041",
+    "filename": "가공비_4월W16_제출_v2.xlsx",
+    "stored": "a75e34326041__가공비_4월W16_제출_v2.xlsx",
+    "category": "부서 제출",
+    "period_id": "2026-04-5",
+    "area": "processing_cost",
+    "size": 274131,
+    "uploaded_at": "2026-07-02T18:45:25"
+  }
+]

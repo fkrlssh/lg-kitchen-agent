@@ -1,0 +1,57 @@
+{
+  "fixed_div_control": {
+    "count": 1,
+    "last_at": "2026-07-02T18:44:49",
+    "last_kind": "첫 제출"
+  },
+  "fixed_prod_control": {
+    "count": 1,
+    "last_at": "2026-07-02T18:44:49",
+    "last_kind": "첫 제출"
+  },
+  "fixed_rawdata": {
+    "count": 1,
+    "last_at": "2026-07-02T18:44:49",
+    "last_kind": "첫 제출"
+  },
+  "fixed_uncontrol": {
+    "count": 1,
+    "last_at": "2026-07-02T18:44:49",
+    "last_kind": "첫 제출"
+  },
+  "investment": {
+    "count": 1,
+    "last_at": "2026-07-02T18:44:49",
+    "last_kind": "첫 제출"
+  },
+  "logistics_cost": {
+    "count": 1,
+    "last_at": "2026-07-02T18:44:49",
+    "last_kind": "첫 제출"
+  },
+  "material_cost": {
+    "count": 1,
+    "last_at": "2026-07-02T18:44:49",
+    "last_kind": "첫 제출"
+  },
+  "processing_cost": {
+    "count": 1,
+    "last_at": "2026-07-02T18:44:49",
+    "last_kind": "첫 제출"
+  },
+  "quality": {
+    "count": 1,
+    "last_at": "2026-07-02T18:44:49",
+    "last_kind": "첫 제출"
+  },
+  "sales_region1": {
+    "count": 1,
+    "last_at": "2026-07-02T18:44:49",
+    "last_kind": "첫 제출"
+  },
+  "sales_region2": {
+    "count": 1,
+    "last_at": "2026-07-02T18:44:49",
+    "last_kind": "첫 제출"
+  }
+}

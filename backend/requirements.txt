@@ -1,0 +1,56 @@
+# FastAPI 기본
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# 설정 관리
+pydantic==2.5.0
+pydantic-settings==2.1.0
+python-dotenv>=1.0.0
+
+# HTTP 클라이언트 (외부 API 호출용 / OpenAI-compatible client 의존)
+httpx==0.25.2
+
+# LLM client — OpenAI-compatible (LG 내부망 endpoint 호출용)
+# ⚠️ anthropic SDK 사용 금지: 내부망에서 api.anthropic.com 접근 불가
+openai>=1.50.0
+
+# Excel / 데이터 처리
+pandas>=2.2.0
+openpyxl>=3.1.2
+
+# 보고서 생성 (PPT / Word / Excel + 차트 임베드)
+python-pptx>=1.0.0
+python-docx>=1.1.0
+xlsxwriter>=3.2.0
+lxml>=5.0.0
+Pillow>=10.0.0
+matplotlib>=3.9.0
+
+# 데이터베이스 (실적 history 저장)
+sqlalchemy>=2.0.23
+alembic>=1.13.0
+# psycopg2-binary>=2.9.9   # PostgreSQL 사용 시 활성화
+# asyncpg>=0.29.0          # async 쓸 경우
+
+# 스케줄링 (격주 트리거 등)
+apscheduler>=3.10.4
+
+# 기본 유틸리티
+python-multipart==0.0.6
+
+# 개발용
+pytest==7.4.3
+pytest-asyncio==0.21.1
+
+# TODO: 필요시 추가
+# 이메일 (이메일 인프라 확정 후)
+# msal>=1.28.0             # MS Graph (Outlook) 인증
+# O365>=2.0.34             # MS Graph 고수준 래퍼 (대안)
+# 또는 stdlib imaplib + email — IMAP 쓰는 경우
+
+# 인증/보안 (사내 SSO 연동 시)
+# python-jose[cryptography]==3.3.0
+# passlib[bcrypt]==1.7.4
+
+# Redis (캐싱용)
+# redis==5.0.1

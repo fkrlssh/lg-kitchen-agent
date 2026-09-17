@@ -1,0 +1,93 @@
+# 키친솔루션 한계돌파 플랫폼 — Demo 배포 (EC2 등 단일 호스트용).
+#
+# 구성:
+#   nginx :80   →  Basic Auth (htpasswd) + frontend(/) + backend(/api,/docs)
+#   frontend :3000   Next.js standalone
+#   backend  :8000   FastAPI (DEMO_MODE=true — LLM 호출 zero)
+#
+# 사용:
+#   1) cp backend/.env.demo backend/.env   # DEMO_MODE=true 가 들어있는 .env 준비
+#   2) docker compose build
+#   3) docker compose up -d
+#   4) http://<EC2_PUBLIC_IP>/  →  basic auth 프롬프트 → demo / <비번>
+#
+# Dev (LLM + hot reload) 는 docker 안 쓰고 conda env 로:
+#   conda activate lg-kitchen && cd backend && uvicorn app.main:app --reload
+#   cd frontend && npm run dev
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: lks-backend
+    environment:
+      - ENVIRONMENT=demo
+      - DEBUG=false
+      - DEMO_MODE=true               # ← LLM 호출 skip, mock_narratives 재생
+      - LLM_BASE_URL=                # 비워둠 (호출 안 함)
+      - LLM_API_KEY=
+      - ALLOWED_ORIGINS=["*"]        # JSON 형식 (pydantic-settings List[str] 파싱). nginx 가 same-origin 으로 다 묶음
+    volumes:
+      # task JSON / 보고서 파일은 호스트에 persist (컨테이너 재시작 후에도 유지)
+      - backend_tasks:/app/tasks
+      - backend_temp:/app/temp
+    expose:
+      - "8000"
+    networks:
+      - lks-net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8000/api/scenarios').read()"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        # build-time env — Next.js 빌드에 박혀들어가는 값.
+        # 빈 문자열 = same-origin (nginx 가 /api 를 backend 로 reverse proxy)
+        NEXT_PUBLIC_API_URL: ""
+        NEXT_PUBLIC_APP_NAME: "키친솔루션 한계돌파 플랫폼"
+    container_name: lks-frontend
+    environment:
+      - NODE_ENV=production
+      - HOSTNAME=0.0.0.0
+      - PORT=3000
+    expose:
+      - "3000"
+    networks:
+      - lks-net
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:alpine
+    container_name: lks-nginx
+    ports:
+      - "80:80"
+      # HTTPS 쓸 거면 아래 주석 풀고, certbot 발급 후 nginx.conf 에 ssl 블록 추가
+      # - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/htpasswd:/etc/nginx/htpasswd:ro
+      # - ./nginx/certs:/etc/nginx/certs:ro
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - lks-net
+    restart: unless-stopped
+
+volumes:
+  backend_tasks:
+  backend_temp:
+
+networks:
+  lks-net:
+    driver: bridge
